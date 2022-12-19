@@ -1,5 +1,6 @@
 # TMDBApp
 
+Note: Apk included in repository (TMDB_App.apk)
 
 Popular, Upcoming movies
 
