@@ -3,6 +3,7 @@
 Note: Apk included in repository (TMDB_App.apk)
 
 Popular, Upcoming, Top rated movies
+
 Top rated movies using offline first feature, you can view top rated movies while offline (if previously loaded online)
 
 ![1](https://user-images.githubusercontent.com/43784511/208415428-15b140fd-9d7b-4453-8159-51d645f2b59e.jpg)
