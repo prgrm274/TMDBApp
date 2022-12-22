@@ -5,9 +5,6 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_upcoming">
 
-    <!--layout yg digunakan fragment upcoming, popular, dan toprated isinya sama-->
-    <!--jadi bisa pake satu layout-->
-    <!--tools:layout="@layout/fragment_popular"-->
     <fragment
         android:id="@+id/nav_upcoming"
         android:name="com.programmer2704.movapp.view.fragment.UpcomingFragment"
