@@ -1,13 +1,13 @@
 package com.programmer2704.movapp.data.remote
 
 import com.programmer2704.movapp.data.local.GenreEntityResponse
-import com.programmer2704.movapp.model.Movie
 import com.programmer2704.movapp.data.local.MovieEntityResponse
 import com.programmer2704.movapp.data.local.TopratedEntityResponse
 import com.programmer2704.movapp.data.local.VideoResponse
+import com.programmer2704.movapp.model.Movie
 import com.programmer2704.movapp.model.Revieww
-import com.programmer2704.movapp.model.TopratedApiResult
 import kotlinx.coroutines.Deferred
+import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -30,20 +30,17 @@ interface MovieApi {
     @GET("movie/{movie_id}/videos")
     fun getVideosAsync(@Path("movie_id") id: Int): Deferred<Response<VideoResponse>>
 
-    // * reviews
     @GET("movie/{movie_id}/reviews")
     fun getReviewsAsync(@Path("movie_id") id: Int): Deferred<Response<Revieww>>
 
-
-    //|try2
     @GET("movie/top_rated")
     suspend fun getTopRatedMovieTry2(@Query("page") page: Int,
     ): TopratedEntityResponse
 
-
-    //|try3
     @GET("movie/top_rated")
-    suspend fun getTopRatedMovieTry3(@Query("page") page: Int,
-    )
-    : TopratedApiResult<Movie>
+    fun getTopRatedMovies(@Query("api_key") apiKey: String,
+                          @Query("language") language: String,
+                          @Query("page") pageNumber: Int,
+                          @Query("region") region:String,
+                          @Query("with_release_type") releaseType: String): Call<MovieRequest>
 }
