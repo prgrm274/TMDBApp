@@ -36,19 +36,21 @@ class AppDatabaseTest {
     }
 
     private fun testPopularMovieEntity(
-//        id: Long = 0,
         id: Int,
         title: String,
         originalTitle: String
     ) = Movie(
         id,
+        title = title,
+        vote_average = 0F,
+        vote_count = 0,
         original_title = originalTitle,
         overview = "",
         poster_path = "",
         backdrop_path = "",
         release_date = "",
         original_language = "",
-        popularity = 225.21,
+        popularity = 225.21F,
         budget = 0,
         revenue = 0,
         runtime = 0
