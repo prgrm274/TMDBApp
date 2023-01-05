@@ -120,4 +120,14 @@ dependencies {
     androidTestImplementation 'androidx.test:core:1.4.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+    def mockito_core = "4.10.0"
+    def mockkVersion = "1.13.3"
+    implementation"io.mockk:mockk:$mockkVersion"
+    implementation"io.mockk:mockk-android:$mockkVersion"
+    implementation"io.mockk:mockk-agent:$mockkVersion"
+    implementation"org.mockito:mockito-core:$mockito_core"
+    implementation"org.mockito:mockito-junit-jupiter:$mockito_core"
+    implementation"org.mockito:mockito-inline:$mockito_core"
 }
