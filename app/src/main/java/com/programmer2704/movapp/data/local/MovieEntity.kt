@@ -9,7 +9,6 @@ data class MovieEntity (
     @PrimaryKey
     val id: Int,
 
-    @NonNull
     val poster_path: String?
 )
 
